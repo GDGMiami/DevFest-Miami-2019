@@ -57,26 +57,32 @@
     },
     "speakers": {
       "title": "Speakers",
-      "metaDescription": "Hear from the Googlers, Partners, and Guest Speakers who are building the future of cloud. Check back often as we add more speakers, including our customers and partners.",
-      "description": "Hear from the Googlers, Partners, and Guest Speakers who are building the future of cloud. Check back often as we add more speakers, including our customers and partners.",
       "background": {
         "color": "#FFF"
       },
       "fontColor": "#424242"
-    },
-    "previousSpeakers": {
-      "title": "Previous Speakers",
-      "metaDescription": "Check who was with us last years",
-      "background": {
-        "color": "#FFF"
-      },
-      "fontColor": "#424242"
-    },
+    },  
     "schedule": {
       "title": "Schedule",
       "metaDescription": "Choose your sessions to visit",
       "background": {
         "color": "#fff"
+      },
+      "fontColor": "#424242"
+    },
+    "sponsors": {
+      "title": "Sponsors",
+      "metaDescription": "Random text",
+      "background": {
+        "color": "#fff"
+      },
+      "fontColor": "#424242"
+    },
+    "location": {
+      "title": "Location",
+      "metaDescription": "Check the location!!",
+      "background": {
+        "color": "#FFF"
       },
       "fontColor": "#424242"
     },
@@ -106,21 +112,21 @@
     }
   },
   "location": {
-    "label": "Location",
-    "name": "Planeta kino",
-    "city": "Lviv",
-    "short": "Lviv, Ukraine",
-    "address": "36 Shchyretska St, Lviv, Ukraine",
+    "label": "Wix.com Miami Beach Office",
+    "name": "Wix.com Miami Beach Office",
+    "city": "Miami Beach",
+    "short": "Miami Beach, Florida",
+    "address": "1691 Michigan Ave, Miami Beach, FL 33139",
     "pointer": {
-      "latitude": 49.809841,
-      "longitude": 23.972805,
+      "latitude": 25.7923845,
+      "longitude": -80.1385819,
       "zoom": 5
     },
     "mapCenter": {
-      "latitude": 48,
-      "longitude": 8
+      "latitude": 25.7923845,
+      "longitude": -80.1385819
     },
-    "description": "Newly built Pivdennyi Expo is a long-awaited exhibition center in Lviv, which can fulfill the needs of the large-scale event"
+    "description": "The Wix.com office's design is very minimalistic. Details include polished concrete floors and open exposed ceilings. Light wood tones and pops of yellow, green, orange and blue colors provide employees with a tropical feel. There are bright green swings in the reception, cabana-style “hang out” spaces with orange benches and mobile cube and round ottomans that can be easily moved anywhere in the office."
   },
   "mediaQueries": {
     "xs": {

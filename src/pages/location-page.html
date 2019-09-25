@@ -1,0 +1,75 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/marked-element/marked-element.html">
+<link rel="import" href="../../bower_components/plastic-image/plastic-image.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+
+<link rel="import" href="../elements/map-block.html">
+
+<link rel="import" href="../mixins/redux-mixin.html">
+<link rel="import" href="../elements/shared-styles.html">
+
+
+<dom-module id="location-page">
+  <template>
+    <style include="shared-styles flex flex-alignment">
+      :host {
+        display: block;
+      }
+
+      .description-wrapper {
+          background-color: var(--secondary-background-color);
+          width: 100%;
+          overflow: hidden;
+      }
+      .member-details {
+        color: var(--primary-text-color);
+        margin-left: 16px;
+      }
+
+      .name {
+        padding-left: 6px;
+        line-height: 1.2;
+      }
+
+      .activity {
+        font-size: 16px;
+        padding-left: 6px;
+      }
+
+    </style>
+
+    <polymer-helmet
+    title="{$ heroSettings.location.title $} | {$ title $}"
+    description="{$ heroSettings.location.metaDescription $}"
+    active="[[active]]"
+    ></polymer-helmet>
+
+    <hero-block
+      background-image="{$ heroSettings.location.background.image $}"
+      background-color="{$ heroSettings.location.background.color $}"
+      font-color="{$ heroSettings.location.fontColor $}"
+      active="[[active]]"
+    >
+      <div class="hero-title highlight-font">{$ heroSettings.location.title $}</div>
+      <p class="hero-description">{$ heroSettings.location.description $}</p>
+    </hero-block>
+
+
+    <map-block></map-block>
+    <footer-block></footer-block>
+  </template>
+
+  <script>
+
+    // eslint-disable-next-line no-undef
+    class LocationPage extends ScrollFunctions(ReduxMixin(Polymer.Element)) {
+      static get is() {
+        return 'location-page';
+      }
+    }
+
+    window.customElements.define(LocationPage.is, LocationPage);
+
+  </script>
+</dom-module>
