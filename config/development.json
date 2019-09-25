@@ -1,11 +1,11 @@
 {
   "basepath": "/",
-  "url": "https://hoverboard-dev.firebaseapp.com/",
+  "url": "https://devfest-miami-2019.firebaseapp.com/",
   "analytics": "UA-43643469-8",
   "prefix": "/",
   "firebase": {
-    "appId": "",
-    "apiKey": "AIzaSyBu9LI-hY4NfUOPJJKuV3BfQm7edLr2-aE",
+    "appId": "devfest-miami-2019",
+    "apiKey": "AIzaSyC0NK-z_dKFfSvkTKfIc0ox6k79GJhaR7M",
     "authDomain": "hoverboard-dev.firebaseapp.com",
     "databaseURL": "https://hoverboard-dev.firebaseio.com",
     "projectId": "hoverboard-dev",
