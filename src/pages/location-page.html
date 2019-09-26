@@ -1,0 +1,70 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/marked-element/marked-element.html">
+<link rel="import" href="../../bower_components/plastic-image/plastic-image.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+
+<link rel="import" href="../elements/map-block.html">
+
+<link rel="import" href="../mixins/redux-mixin.html">
+<link rel="import" href="../elements/shared-styles.html">
+
+
+<dom-module id="location-page">
+  <template>
+    <style include="shared-styles flex flex-alignment">
+      :host {
+        display: block;
+      }
+
+      .description-wrapper {
+          background-color: var(--secondary-background-color);
+          width: 100%;
+          overflow: hidden;
+      }
+    </style>
+
+    <polymer-helmet
+      title="{$ heroSettings.location.title $} | {$ title $}"
+      description="{$ heroSettings.location.metaDescription $}"
+      active="[[active]]">
+
+    </polymer-helmet>
+
+    <hero-block
+      background-image="{$ heroSettings.location.background.image $}"
+      background-color="{$ heroSettings.location.background.color $}"
+      font-color="{$ heroSettings.location.fontColor $}"
+      active="[[active]]"
+    >
+      <div class="hero-title highlight-font">{$ heroSettings.location.title $}</div>
+      <p class="hero-description">
+        <h2>Venue</h2>
+        <ul><b><a href="https://www.google.com/maps/dir/?api=1&destination=1691%20Michigan%20Ave,%20Miami%20Beach,%20FL%2033139">Wix.com Miami Beach Office</a></b></ul>
+        <h2>Parking</h2>
+        <ul>
+          <li><b>Miami Beach Parking Garage on 17th Street:</b> 640 17th St, Miami Beach, FL 33139</li>
+          <li><b>Lincoln Garage:</b> 1691 Michigan Ave #206, Miami Beach, FL 33139</li>
+        </ul>
+        <ul>There isn't free parking in the area, but the two parking locations listed are public parking. Cost is about $1-$1.5 per hour.</ul>
+      </p>
+    </hero-block>
+
+    <map-block></map-block>
+    
+    <footer-block></footer-block>
+  </template>
+
+  <script>
+
+    // eslint-disable-next-line no-undef
+    class LocationPage extends ScrollFunctions(ReduxMixin(Polymer.Element)) {
+      static get is() {
+        return 'location-page';
+      }
+    }
+
+    window.customElements.define(LocationPage.is, LocationPage);
+
+  </script>
+</dom-module>
