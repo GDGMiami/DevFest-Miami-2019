@@ -1,0 +1,129 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/marked-element/marked-element.html">
+<link rel="import" href="../../bower_components/plastic-image/plastic-image.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+
+<link rel="import" href="../elements/map-block.html">
+
+<link rel="import" href="../mixins/redux-mixin.html">
+<link rel="import" href="../elements/shared-styles.html">
+
+
+<dom-module id="sponsors-page">
+  <template>
+    <style include="shared-styles flex flex-alignment">
+      :host {
+        display: block;
+      }
+
+      .description-wrapper {
+          background-color: var(--secondary-background-color);
+          width: 100%;
+          overflow: hidden;
+      }
+
+      .sponsor-block {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: auto;
+        height: auto;
+      }
+
+      .logo {
+        max-width: 80%;
+        margin: 32px;
+      }
+
+    </style>
+
+    <polymer-helmet
+    title="{$ heroSettings.sponsors.title $} | {$ title $}"
+    description="{$ heroSettings.sponsors.metaDescription $}"
+    active="[[active]]">
+    </polymer-helmet>
+
+    <hero-block
+      background-color="{$ heroSettings.sponsors.background.color $}"
+      font-color="{$ heroSettings.sponsors.fontColor $}"
+      active="[[active]]">
+
+      <div class="hero-title highlight-font">{$ heroSettings.sponsors.title $}</div>
+      <p class="hero-description"></p>
+
+      <div class="sponsor-block">
+        <a href="https://developers.google.com/programs/community/">
+          <img src="/images/sponsors/google.png" alt="Google" width="270px" class="logo">
+        </a>
+      </div>
+
+      <div class="sponsor-block">
+        <a href="https://umiamihealth.org/sylvester-comprehensive-cancer-center">
+          <img src="/images/sponsors/sylvester-cmyk.png" alt="Sylvester Comprehensive Cancer Center" width="270px" class="logo">
+        </a>
+
+        <a href="http://miamictsi.org/">
+          <img src="/images/sponsors/ctsi.png" alt="UM Clinical &amp; Translational Science Institute" width="250px" class="logo">
+        </a>
+      </div>
+
+      <div class="sponsor-block">
+        <a href="https://wix.com">
+          <img src="/images/sponsors/wix.png" alt="Wix.com" width="270px" class="logo">
+        </a>
+        <a href="https://cobuildlab.com">
+          <img src="/images/sponsors/cbl.png" alt="Cobuild Lab" width="270px" class="sponsor">
+        </a>
+      </div>
+
+      <div class="sponsor-block">
+        <a href="https://www.getaround.com/">
+          <img src="/images/sponsors/ga.png" alt="Get Around" width="200px" class="logo">
+        </a>
+
+        <a href="https://www.womentechmakers.com/">
+          <img src="/images/sponsors/wtm.png" alt="Women Techmakers" width="250px" class="logo">
+        </a>
+
+        <a href="https://iamremarkable.withgoogle.com/">
+          <img src="/images/sponsors/iar.png" alt="IamRemarkable" width="250px" class="logo">
+        </a>
+
+        <a href="https://girlswhocode.com/">
+          <img src="/images/sponsors/gwc.jpg" alt="Girls Who Code" width="250px" class="logo">
+        </a>
+
+        <a href="www.miamicmassage.com">
+          <img src="/images/sponsors/mcm.png" alt="Miami Corporate Massage LLC" width="250px" class="logo">
+        </a>
+
+        <a href="https://www.chewy.com/jobs">
+          <img src="/images/sponsors/chewy.png" alt="Chewy" width="220px" class="logo">
+        </a>
+
+        <a href="https://prosourceit.net" target="_blank" rel="noopener noreferrer">
+          <img src="/images/sponsors/psi.png" alt="Pro/Source IT" width="250px" class="logo">
+        </a>
+
+      </div>
+    </hero-block>
+
+    <footer-block></footer-block>
+  </template>
+
+  <script>
+
+    // eslint-disable-next-line no-undef
+    class SponsorsPage extends ScrollFunctions(ReduxMixin(Polymer.Element)) {
+      static get is() {
+        return 'sponsors-page';
+      }
+    }
+
+    window.customElements.define(SponsorsPage.is, SponsorsPage);
+
+  </script>
+</dom-module>

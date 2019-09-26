@@ -22,28 +22,14 @@
           width: 100%;
           overflow: hidden;
       }
-      .member-details {
-        color: var(--primary-text-color);
-        margin-left: 16px;
-      }
-
-      .name {
-        padding-left: 6px;
-        line-height: 1.2;
-      }
-
-      .activity {
-        font-size: 16px;
-        padding-left: 6px;
-      }
-
     </style>
 
     <polymer-helmet
-    title="{$ heroSettings.location.title $} | {$ title $}"
-    description="{$ heroSettings.location.metaDescription $}"
-    active="[[active]]"
-    ></polymer-helmet>
+      title="{$ heroSettings.location.title $} | {$ title $}"
+      description="{$ heroSettings.location.metaDescription $}"
+      active="[[active]]">
+
+    </polymer-helmet>
 
     <hero-block
       background-image="{$ heroSettings.location.background.image $}"
@@ -52,11 +38,20 @@
       active="[[active]]"
     >
       <div class="hero-title highlight-font">{$ heroSettings.location.title $}</div>
-      <p class="hero-description">{$ heroSettings.location.description $}</p>
+      <p class="hero-description">
+        <h2>Venue</h2>
+        <ul><b><a href="https://www.google.com/maps/dir/?api=1&destination=1691%20Michigan%20Ave,%20Miami%20Beach,%20FL%2033139">Wix.com Miami Beach Office</a></b></ul>
+        <h2>Parking</h2>
+        <ul>
+          <li><b>Miami Beach Parking Garage on 17th Street:</b> 640 17th St, Miami Beach, FL 33139</li>
+          <li><b>Lincoln Garage:</b> 1691 Michigan Ave #206, Miami Beach, FL 33139</li>
+        </ul>
+        <ul>There isn't free parking in the area, but the two parking locations listed are public parking. Cost is about $1-$1.5 per hour.</ul>
+      </p>
     </hero-block>
 
-
     <map-block></map-block>
+    
     <footer-block></footer-block>
   </template>
 
