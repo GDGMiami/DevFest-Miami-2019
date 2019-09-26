@@ -38,12 +38,16 @@
         margin: 32px;
       }
 
+      .sponsor-description {
+        max-width: 800px;
+      }
+
     </style>
 
     <polymer-helmet
-    title="{$ heroSettings.sponsors.title $} | {$ title $}"
-    description="{$ heroSettings.sponsors.metaDescription $}"
-    active="[[active]]">
+      title="{$ heroSettings.sponsors.title $} | {$ title $}"
+      description="{$ heroSettings.sponsors.metaDescription $}"
+      active="[[active]]">
     </polymer-helmet>
 
     <hero-block
@@ -52,7 +56,7 @@
       active="[[active]]">
 
       <div class="hero-title highlight-font">{$ heroSettings.sponsors.title $}</div>
-      <p class="hero-description"></p>
+      <p class="hero-description sponsor-description">{$ heroSettings.sponsors.metaDescription $}</p>
 
       <div class="sponsor-block">
         <a href="https://developers.google.com/programs/community/">
