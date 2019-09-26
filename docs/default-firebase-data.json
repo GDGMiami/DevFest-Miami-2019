@@ -1417,9 +1417,8 @@
   },
   "team" : [ {
     "members" : [ {
-      "name" : "Oleh Zasadnyy",
-      "photo" : "/images/people/oleh_zasadnyy.jpg",
-      "photoUrl" : "https://storage.googleapis.com/hoverboard-experimental.appspot.com/images/people/optim/oleh_zasadnyy.jpg",
+      "name" : "Yahima Fumero",
+      "photo" : "/images/team/yahima_500.jpg",
       "socials" : [ {
         "icon" : "facebook",
         "link" : "https://www.facebook.com/oleh.zasadnyy",
@@ -1430,11 +1429,11 @@
         "name" : "Twitter"
       }, {
         "icon" : "website",
-        "link" : "http://o.zasadnyy.com/",
+        "link" : "https://cloud39.co/",
         "name" : "Blog"
       } ],
       "order" : 0,
-      "title" : "Website and sponsors"
+      "title" : "Cloud39 Corp"
     }, {
       "name" : "Sofiya Huts",
       "photo" : "/images/people/sofiya_huts.jpg",
