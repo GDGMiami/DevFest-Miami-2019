@@ -85,17 +85,7 @@
           </a>
 
           <p>{$ aboutBlock.callToAction.howItWas.description $}</p>
-          <paper-button
-            class="animated icon-right"
-            on-tap="_playVideo"
-            ga-on="click"
-            ga-event-category="video"
-            ga-event-action="watch"
-            ga-event-label="about block - {$ aboutBlock.callToAction.howItWas.label $}"
-          >
-            <span>{$  aboutBlock.callToAction.howItWas.label $}</span>
-            <iron-icon icon="hoverboard:arrow-right-circle"></iron-icon>
-          </paper-button>
+          
         </div>
 
         <div class="statistics-block">
@@ -130,15 +120,6 @@
     class AboutBlock extends ReduxMixin(Polymer.Element) {
       static get is() {
         return 'about-block';
-      }
-
-      _playVideo() {
-        uiActions.toggleVideoDialog({
-          title: '{$  aboutBlock.callToAction.howItWas.title $}',
-          youtubeId: '{$  aboutBlock.callToAction.howItWas.youtubeId $}',
-          disableControls: true,
-          opened: true,
-        });
       }
     }
 
