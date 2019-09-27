@@ -10,7 +10,7 @@ To stay up to date on the latest information on sessions, speakers, and activiti
 
 ### Content Formats
 
-During two conference days attendees will be able to attend sessions and hands-on workshops, chat with experts and attendees at coffee breaks and after party, and more.
+During the conference day attendees will be able to attend sessions and hands-on workshops, chat with experts and attendees at coffee breaks and after party, and more.
 
 ## Attendance Details
 

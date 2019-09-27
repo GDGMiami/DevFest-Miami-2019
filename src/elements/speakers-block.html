@@ -38,21 +38,6 @@
         transform: translateZ(0);
       }
 
-      .badges {
-        position: absolute;
-        top: 0;
-        left: calc(50% + 24px);
-      }
-
-      .badge {
-        margin-left: -10px;
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        border: 2px solid #fff;
-        transition: transform var(--animation);
-      }
-
       .badge:hover {
         transform: scale(1.1);
       }
@@ -69,12 +54,6 @@
         --iron-icon-width: 12px;
         --iron-icon-height: 12px;
         color: #fff;
-      }
-
-      .company-logo {
-        margin-top: 6px;
-        width: 100%;
-        height: 16px;
       }
 
       .description {
@@ -182,13 +161,6 @@
                 </template>
               </div>
             </div>
-
-            <plastic-image
-              class="company-logo"
-              srcset="{{speaker.companyLogoUrl}}"
-              sizing="contain"
-              lazy-load preload fade
-            ></plastic-image>
 
             <div class="description">
               <text-truncate lines="1">
