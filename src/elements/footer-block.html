@@ -1,7 +1,5 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
-<link rel="import" href="footer-social.html">
-<link rel="import" href="footer-rel.html">
 <link rel="import" href="footer-nav.html">
 <link rel="import" href="hoverboard-icons.html">
 <link rel="import" href="../mixins/scroll-functions.html">
@@ -12,6 +10,8 @@
     <style include="shared-styles flex flex-alignment positioning">
       :host {
         margin-top: 40px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         display: block;
         position: relative;
         color: var(--footer-text-color);
@@ -36,7 +36,7 @@
       .fab {
         position: absolute;
         right: 25px;
-        top: -25px;
+        top: -38px;
         pointer-events: none;
         z-index: 1;
       }
@@ -53,7 +53,6 @@
       <div class="fab">
         <paper-fab class="back-to-top" icon="hoverboard:up" on-click="backToTop"></paper-fab>
       </div>
-      <footer-social layout flex flex-auto horizontal wrap></footer-social>
       <footer-rel></footer-rel>
       <footer-nav layout horizontal wrap justified center></footer-nav>
     </div>

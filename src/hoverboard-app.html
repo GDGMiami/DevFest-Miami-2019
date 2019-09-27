@@ -170,21 +170,6 @@
             >
               {$ addToHomeScreen.cta $}
             </a>
-
-            <a
-              class="bottom-drawer-link"
-              href$="[[_getTicketUrl(tickets)]]"
-              target="_blank"
-              rel="noopener noreferrer"
-              on-tap="closeDrawer"
-              ga-on="click"
-              ga-event-category="ticket button"
-              ga-event-action="buy_click"
-              layout horizontal center
-            >
-              <span>{$ buyTicket $}</span>
-              <iron-icon icon="hoverboard:open-in-new"></iron-icon>
-            </a>
           </div>
         </div>
 
@@ -453,12 +438,6 @@
 
       _toggleDrawer(e) {
         uiActions.toggleDrawer(e.detail.value);
-      }
-
-      _getTicketUrl(tickets) {
-        if (!tickets.list.length) return '';
-        const availableTicket = tickets.list.filter((ticket) => ticket.available)[0];
-        return availableTicket ? availableTicket.url : tickets.list[0].url;
       }
 
       _isAddToHomeScreenHidden(addToHomescreen, isTabletPlus) {

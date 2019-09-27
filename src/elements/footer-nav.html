@@ -5,6 +5,7 @@
 <dom-module id="footer-nav">
   <template>
     <style include="shared-styles flex flex-alignment">
+
       :host {
         margin: 0 20px;
       }
@@ -25,9 +26,8 @@
       }
 
       .footer-logo {
-        margin: 10px 30px 0 0;
-        height: 24px;
-        width: 120px;
+        height: 49px;
+        width: 166px;
         float: left;
       }
 
@@ -64,16 +64,25 @@
 
     <div class="nav-inline" layout flex>
 
-      <a href="{$ organizer.url $}" target="_blank" rel="noopener noreferrer">
+      <a href="https://meetup.com/GDG-Miami" target="_blank" rel="noopener noreferrer">
         <plastic-image
           class="footer-logo"
-          srcset="../../images/organizer-logo.svg"
+          srcset="../../images/gdg-miami.png"
           sizing="contain"
           alt="{$ organizer.name $}"
           lazy-load
         ></plastic-image>
       </a>
-
+      <a href="https://www.meetup.com/GDG-Cloud-Miami" target="_blank" rel="noopener noreferrer">
+        <plastic-image
+          class="footer-logo"
+          srcset="../../images/gdg-cloud-miami.png"
+          sizing="contain"
+          alt="{$ organizer.name $}"
+          lazy-load
+        ></plastic-image>
+      </a>
+        
       <div class="copyright">
         &copy; [[_getYear()]] Based on <a href="https://github.com/gdg-x/hoverboard" target="_blank" rel="noopener noreferrer">Project
         Hoverboard</a> &middot; <a class="coc" href="/coc">{$ codeOfConduct
