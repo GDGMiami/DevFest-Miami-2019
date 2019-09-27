@@ -34,11 +34,6 @@
         color: var(--secondary-text-color);
       }
 
-      .badge:not(:last-of-type)::after {
-        margin-left: -4px;
-        content: ',';
-      }
-
       .action {
         color: var(--secondary-text-color);
       }
@@ -86,20 +81,7 @@
 
       <div class="dialog-container content">
         <h3 class="meta-info">[[companyInfo]]</h3>
-        <h3 class="meta-info" hidden$="[[isEmpty(speaker.badges)]]">
-          <template is="dom-repeat" items="[[speaker.badges]]" as="badge">
-            <a
-              class="badge"
-              href$="[[badge.link]]"
-              target="_blank"
-              rel="noopener noreferrer"
-              title$="[[badge.description]]"
-            >
-              [[badge.description]]
-            </a>
-          </template>
-        </h3>
-
+      
         <marked-element class="description" markdown="[[speaker.bio]]">
           <div slot="markdown-html"></div>
         </marked-element>

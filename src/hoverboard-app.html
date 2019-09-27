@@ -240,16 +240,6 @@
       </app-header-layout>
     </app-drawer-layout>
 
-    <video-dialog
-      opened="[[ui.videoDialog.opened]]"
-      video-title="[[ui.videoDialog.title]]"
-      youtube-id="[[ui.videoDialog.youtubeId]]"
-      entry-animation="scale-up-animation"
-      exit-animation="fade-out-animation"
-      disable-controls="[[!ui.videoDialog.disableControls]]"
-      fit fixed-top
-    ></video-dialog>
-
     <speaker-details
       opened="[[dialogs.speaker.isOpened]]"
       speaker="[[dialogs.speaker.data]]"
@@ -257,26 +247,12 @@
       no-cancel-on-outside-click="[[viewport.isPhone]]"
     ></speaker-details>
 
-    <previous-speaker-details
-      opened="[[dialogs.previousSpeaker.isOpened]]"
-      speaker="[[dialogs.previousSpeaker.data]]"
-      with-backdrop="[[viewport.isTabletPlus]]"
-      no-cancel-on-outside-click="[[viewport.isPhone]]"
-    ></previous-speaker-details>
-
     <session-details
       opened="[[dialogs.session.isOpened]]"
       session="[[dialogs.session.data]]"
       with-backdrop="[[viewport.isTabletPlus]]"
       no-cancel-on-outside-click="[[viewport.isPhone]]"
     ></session-details>
-
-    <subscribe-dialog
-      opened="[[dialogs.subscribe.isOpened]]"
-      data="[[dialogs.subscribe.data]]"
-      with-backdrop
-      no-cancel-on-outside-click="[[viewport.isPhone]]">
-    </subscribe-dialog>
 
     <signin-dialog
       opened="[[dialogs.signin.isOpened]]"
